@@ -1,0 +1,232 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(@/assets/fonts/Gilroy-Light.otf);
+}
+
+@font-face {
+  font-family: GilroyBold;
+  src: url(@/assets/fonts/Gilroy-ExtraBold.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+  position: relative;
+}
+
+main {
+  position: absolute;
+  width: calc(100vw - 10px);
+  min-width: 1014px;
+  max-width: 1646px;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+ol.list,
+ol.sublist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  max-width: 2040px;
+}
+
+ol.list > li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.list-item-heading {
+  display: inline;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 8fr 4fr;
+}
+
+.list-item-row {
+  display: inline;
+  display: grid;
+  grid-template-columns: 1fr 6fr 8fr 4fr;
+}
+
+
+.list-item-heading > div,
+.list-item-row > div {
+  font-family: Gilroy;
+  min-width: 56px;
+  padding: 10px;
+}
+
+.list-item-heading .list-item-number,
+.list-item-row .list-item-number {
+  margin-left: 22px;
+}
+
+.list-item-heading .list-item-header,
+.list-item-row .list-item-header {
+  color: #949494;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.12px;
+  padding: 4px;
+}
+
+.list-item-heading .list-item-body,
+.list-item-row .list-item-body {
+  color: #212121;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  padding-right: 10px;
+  padding: 4px;
+}
+
+.list-item-tools .badge {
+  float: right;
+  font-family: Gilroy;
+  font-size: 12px;
+  line-height: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 30px;
+  text-align: center;
+  border-radius: 30px;
+  background: rgba(37, 82, 198, 0.3);
+  color: white;
+  margin-top: 16px;
+  margin-right: 24px;
+}
+
+.list-item-tools .menu-button {
+  position: relative;
+  float: right;
+  border-style: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 12px;
+  background-color: rgba(57, 122, 245, 1);
+  margin-top: 10px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.list-item-tools .active .menu-button {
+  border: 1px solid rgba(57, 122, 245, 1);
+  background-color: white;
+}
+
+.list-item-tools .menu-button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-item-tools .indicator {
+  position: relative;
+  float: right;
+  border-style: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 12px;
+  background-color: rgba(57, 122, 245, 1);
+  margin-top: 10px;
+  align-items: center;
+  margin-right: 22px;
+  cursor: grab;
+}
+
+.indicator img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Could not found Gilroy 700 from internet, so I have used Gilroy 900 */
+.list-item-heading .list-item-name .list-item-body {
+  text-transform: uppercase;
+  font-family: GilroyBold;
+}
+
+ol.sublist {
+  border-top: 1px solid rgba(225, 225, 225, 1);
+}
+
+.sublist-divider {
+  border-top: 1px solid rgba(225, 225, 225, 1);
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-content {
+  position: absolute;
+  top: calc(100% + 42px);
+  left: calc(100% - 180px);
+  width: 180px;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 1.1622477769851685px 2.2138051986694336px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 2.7930428981781006px 5.32008171081543px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.menu-content button {
+  border-style: none;
+  font-family: Gilroy;
+  font-size: 15px;
+  line-height: 20px;
+  width: 172px;
+  height: 40px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  background-color: rgba(237, 242, 255, 1);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+}
+
+.menu-content button img {
+  margin-top: 5px;
+  float: left;
+}
+
+.menu-content button p {
+  float: left;
+  position: absolute;
+  margin-left: 28px;
+  top: -3px;
+}
+
+.menu-content button:last-child {
+  margin-bottom: 4px;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
