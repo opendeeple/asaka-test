@@ -75,7 +75,7 @@
                   Название
                 </div>
                 <div class="list-item-body">
-                  <img src="~@/assets/icons/folder-icon.svg"/> {{ item.name }}
+                  <img src="~@/assets/icons/file-icon.svg"/> {{ item.name }}
                 </div>
               </div>
               <!-- subitem inorder column -->
